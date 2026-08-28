@@ -148,7 +148,9 @@ h2 {
 .row.correct { background: var(--correct-bg); }
 .row.correct .mark { color: #2ecc71; }
 .row.wrong { background: var(--wrong-bg); }
-.row .delta { font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.row .delta { font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; font-weight: 700; }
+.row .delta.down { color: #ff6b6b; }
+.row .delta.up { color: #2ecc71; }
 
 .board.actual .row .pts-val { color: var(--muted); font-size: 12px; }
 
