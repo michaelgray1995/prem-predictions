@@ -118,8 +118,9 @@ function renderPredictionBoard(pred, score, actual, container) {
     } else if (mark.actualPos == null) {
       r.append(el("div", "delta", "—"));
     } else {
-      const diff = mark.actualPos - mark.predictedPos;
-      r.append(el("div", "delta", (diff > 0 ? "↓" : "↑") + Math.abs(diff)));
+          const diff = mark.actualPos - mark.predictedPos;
+      const down = diff > 0;
+      r.append(el("div", "delta " + (down ? "down" : "up"), (down ? "↓" : "↑") + Math.abs(diff)));
     }
     board.append(r);
   }
