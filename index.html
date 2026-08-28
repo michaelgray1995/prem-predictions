@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prem Predictions 2026/27</title>
+  <meta name="description" content="Live Premier League table vs the lads' predictions." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header>
+    <h1>⚽ Prem Predictions <span id="season"></span></h1>
+    <div class="sub">Live Premier League table vs everyone's predictions · 1 point per team in its exact predicted spot</div>
+    <div id="status"><span class="dot"></span><span id="status-text">Loading…</span></div>
+  </header>
+
+  <main>
+    <div id="error" class="error-banner" hidden></div>
+
+    <section>
+      <h2>🏆 Leaderboard</h2>
+      <div id="leaderboard" class="leaderboard"></div>
+    </section>
+
+    <section>
+      <h2>Tables</h2>
+      <div class="legend">
+        <span><span class="swatch c"></span> Correct spot (+1)</span>
+        <span><span class="swatch w"></span> Wrong spot</span>
+        <span>↑/↓ = how far the team actually is from the prediction · — = team not in live table</span>
+      </div>
+      <div id="boards" class="boards"></div>
+    </section>
+  </main>
+
+  <footer>
+    Auto-refreshes every 60s · Data from football-data.org
+  </footer>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
